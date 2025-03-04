@@ -1,6 +1,7 @@
 import React from 'react'
 import { PROFILE } from '../constants'
 import profilePic from '../assets/VJ.jpg'
+import profilePicMobile from '../assets/VJ-Mobile.jpg'
 import { motion } from 'motion/react'
 
 const HeroSection = () => {
@@ -9,7 +10,15 @@ const HeroSection = () => {
       <motion.img
         src={profilePic}
         alt={PROFILE.name}
-        className='absolute inset-0 z-10 h-full w-full object-cover'
+        className='absolute max-sm:hidden inset-0 z-10 h-full w-full object-cover'
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+      />
+      <motion.img
+        src={profilePicMobile}
+        alt={PROFILE.name}
+        className='absolute sm:hidden inset-0 z-10 h-full w-full object-cover'
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}

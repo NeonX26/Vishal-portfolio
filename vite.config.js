@@ -7,5 +7,9 @@ export default defineConfig({
   plugins: [react(),
     tailwindcss(),
   ],
-  base: "/Vishal-portfolio"
+  base: "/Vishal-portfolio",
+  server: {
+    port: 3000,
+    host: '192.168.29.144'
+  },
 })

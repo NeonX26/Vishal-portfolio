@@ -64,7 +64,7 @@ const Experience = () => {
                 </motion.div>
                 <motion.div 
                 variants={itemVariant}
-                className='w-full p-2 display-none md:w-1/2'>
+                className='w-full p-2 max-sm:hidden md:w-1/2'>
                     <video className='w-full rounded-lg' autoPlay muted loop>
                         <source src={video} type='video/mp4' />
                     </video>
